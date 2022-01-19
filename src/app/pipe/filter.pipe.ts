@@ -19,7 +19,7 @@ export class FilterPipe implements PipeTransform {
      * Ellenőrzés: ha a value nem tömb, vagy nincs megadva a phrase vagy a key,
      * térj vissza a value változóval.
      */
-    if (value!=[] || !phrase || !key){
+    if (!Array.isArray(value) || !phrase || !key){
       return value;
     }
 

@@ -19,7 +19,7 @@ export class SorterPipe implements PipeTransform {
      * Ellenőrzés: ha a value nem tömb vagy nincs megadva a key,
      * térj vissza a value változóval.
      */
-     if (value!=[] || !key){
+     if (!Array.isArray(value) || !key){
       return value;
     }
 
